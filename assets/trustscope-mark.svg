@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="TrustScope brand mark">
+  <defs>
+    <linearGradient id="tsBg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#0F1C34"/>
+      <stop offset="1" stop-color="#091425"/>
+    </linearGradient>
+    <linearGradient id="tsGlow" x1="0" x2="1">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="tsMint" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.20 0 1 0 0 0.47 0 0 1 0 1 0 0 0 0.35 0"/>
+    </filter>
+  </defs>
+
+  <rect x="88" y="88" width="848" height="848" rx="232" fill="url(#tsBg)"/>
+  <rect x="88" y="88" width="848" height="848" rx="232" fill="none" stroke="rgba(255,255,255,.08)"/>
+
+  <circle cx="512" cy="512" r="236" fill="none" stroke="url(#tsGlow)" stroke-width="34" opacity=".94"/>
+  <circle cx="512" cy="512" r="186" fill="none" stroke="#173153" stroke-width="20"/>
+  <circle cx="512" cy="512" r="70" fill="url(#tsGlow)" opacity=".18" filter="url(#softGlow)"/>
+
+  <path d="M332 372h90M332 372v90M692 372h-90M692 372v90M332 652h90M332 652v-90M692 652h-90M692 652v-90"
+        fill="none" stroke="#8BC1FF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M512 326c70 52 133 62 133 62v120c0 102-70 174-133 210-63-36-133-108-133-210V388s63-10 133-62z"
+        fill="none" stroke="#E6F0FF" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M454 507l42 42 86-94" fill="none" stroke="url(#tsMint)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
