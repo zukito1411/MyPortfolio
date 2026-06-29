@@ -11,8 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -59,9 +63,9 @@
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="#projects">See live projects</a>
-              <a class="button button-secondary" href="./Nymwhel_M_Bernardo_Resume.pdf" download>Download resume</a>
-              <a class="button button-ghost" href="mailto:bnymwhel@gmail.com">Email me</a>
+              <a class="button button-primary" href="#projects">View work</a>
+              <a class="button button-secondary" href="./Nymwhel_M_Bernardo_Resume.pdf" download>Resume PDF</a>
+              <a class="button button-ghost" href="https://github.com/zukito1411" target="_blank" rel="noreferrer">GitHub</a>
             </div>
 
             <div class="quick-strip">
@@ -83,25 +87,33 @@
           <aside class="hero-side">
             <article class="hero-feature">
               <p class="card-label">What I do best</p>
-              <h2>Shipping interfaces that feel intentional, not just functional.</h2>
+              <h2>Sharper screens. Better flow. Stronger delivery.</h2>
               <p>
-                My work usually sits at the point where design polish, implementation detail, debugging,
-                testing, and product usability all meet. I like making systems feel cleaner, tighter, and more ready to launch.
+                I focus on product UI that looks cleaner, behaves better, and feels more ready for real users,
+                demos, and client review.
               </p>
+              <div class="stack-ribbon" aria-label="Primary tech stack">
+                <span><i class="devicon-angularjs-plain"></i> Angular</span>
+                <span><i class="devicon-react-original"></i> React</span>
+                <span><i class="devicon-typescript-plain"></i> TypeScript</span>
+                <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+                <span><i class="devicon-java-plain"></i> Java</span>
+                <span><i class="devicon-python-plain"></i> Python</span>
+              </div>
             </article>
 
             <div class="hero-stats">
               <article>
                 <span>4</span>
-                <p>Live public projects and product demos</p>
+                <p>live shipped builds</p>
               </article>
               <article>
                 <span>3+</span>
-                <p>Years across trainee, engineer, and engineer II roles</p>
+                <p>years in delivery roles</p>
               </article>
               <article>
                 <span>End-to-end</span>
-                <p>Frontend, backend, QA, bug fixing, and client-facing delivery</p>
+                <p>frontend to QA handoff</p>
               </article>
             </div>
           </aside>
@@ -147,6 +159,11 @@
                 <li>Clean business UI with strong operational clarity</li>
                 <li>Designed to feel production-ready and sellable</li>
               </ul>
+              <div class="tech-line">
+                <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
+                <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+                <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+              </div>
               <div class="project-actions">
                 <a class="button button-primary" href="https://ledgerail.onrender.com/" target="_blank" rel="noreferrer">Open live app</a>
               </div>
@@ -166,6 +183,11 @@
                 <li>Host-agnostic backend plus modern dashboard UX</li>
                 <li>Built to deploy cleanly with env-based config</li>
               </ul>
+              <div class="tech-line">
+                <i class="devicon-react-original colored" aria-hidden="true"></i>
+                <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
+                <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+              </div>
               <div class="project-actions">
                 <a class="button button-primary" href="https://cryptodates.onrender.com/" target="_blank" rel="noreferrer">Open live app</a>
               </div>
@@ -185,6 +207,11 @@
                 <li>Project-based trust and AI activity logging</li>
                 <li>Modern UI system across admin and workspace views</li>
               </ul>
+              <div class="tech-line">
+                <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
+                <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+              </div>
               <div class="project-actions">
                 <a class="button button-primary" href="https://trustscope.onrender.com/" target="_blank" rel="noreferrer">Open live app</a>
               </div>
@@ -204,6 +231,11 @@
                 <li>Desktop and mobile delivery mindset</li>
                 <li>Hands-on solo build execution</li>
               </ul>
+              <div class="tech-line">
+                <i class="devicon-unity-original colored" aria-hidden="true"></i>
+                <i class="devicon-csharp-plain colored" aria-hidden="true"></i>
+                <i class="devicon-github-original colored" aria-hidden="true"></i>
+              </div>
               <div class="project-actions">
                 <a class="button button-primary" href="https://space-defenders-impact.onrender.com/" target="_blank" rel="noreferrer">Open live app</a>
               </div>
@@ -236,7 +268,7 @@
 
             <div class="contact-block">
               <p class="card-label">Links</p>
-              <a href="https://github.com/nbernardo1411" target="_blank" rel="noreferrer">GitHub profile</a>
+              <a href="https://github.com/zukito1411" target="_blank" rel="noreferrer">GitHub profile</a>
               <a href="./Nymwhel_M_Bernardo_Resume.pdf" download>Resume PDF</a>
             </div>
           </article>
@@ -309,26 +341,55 @@
           <div class="skills-grid">
             <article class="panel skill-card">
               <h3>Frontend</h3>
+              <div class="skill-icons" aria-hidden="true">
+                <i class="devicon-angularjs-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-typescript-plain colored"></i>
+              </div>
               <p>Angular, React, TypeScript, JavaScript, HTML, XML</p>
             </article>
             <article class="panel skill-card">
               <h3>Backend and scripting</h3>
+              <div class="skill-icons" aria-hidden="true">
+                <i class="devicon-nodejs-plain colored"></i>
+                <i class="devicon-java-plain colored"></i>
+                <i class="devicon-python-plain colored"></i>
+                <i class="devicon-php-plain colored"></i>
+              </div>
               <p>Node.js, Java, Python, PHP</p>
             </article>
             <article class="panel skill-card">
               <h3>Databases</h3>
+              <div class="skill-icons" aria-hidden="true">
+                <i class="devicon-mysql-plain colored"></i>
+                <i class="devicon-postgresql-plain colored"></i>
+              </div>
               <p>MySQL, PostgreSQL, NeonDB, PgAdmin</p>
             </article>
             <article class="panel skill-card">
               <h3>Cloud and platforms</h3>
+              <div class="skill-icons" aria-hidden="true">
+                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                <i class="devicon-ubuntu-plain colored"></i>
+              </div>
               <p>AWS CloudWatch, Amazon Cognito, Amazon RDS, Render deployment</p>
             </article>
             <article class="panel skill-card">
               <h3>Tools and collaboration</h3>
+              <div class="skill-icons" aria-hidden="true">
+                <i class="devicon-git-plain colored"></i>
+                <i class="devicon-github-original colored"></i>
+                <i class="devicon-gitlab-plain colored"></i>
+              </div>
               <p>Git, GitHub, GitLab, Jira, Mattermost, Microsoft Teams, TortoiseSVN</p>
             </article>
             <article class="panel skill-card">
               <h3>Delivery practices</h3>
+              <div class="skill-icons skill-icons-text" aria-hidden="true">
+                <span>QA</span>
+                <span>UX</span>
+                <span>Docs</span>
+              </div>
               <p>SDLC, software testing, test case creation, debugging, documentation, client presentations, AI productivity tools</p>
             </article>
           </div>
@@ -357,7 +418,7 @@
           </div>
           <div class="callout-actions">
             <a class="button button-primary" href="mailto:bnymwhel@gmail.com">Send email</a>
-            <a class="button button-secondary" href="https://github.com/nbernardo1411" target="_blank" rel="noreferrer">View GitHub</a>
+            <a class="button button-secondary" href="https://github.com/zukito1411" target="_blank" rel="noreferrer">View GitHub</a>
             <a class="button button-ghost" href="./Nymwhel_M_Bernardo_Resume.pdf" download>Get resume</a>
           </div>
         </section>

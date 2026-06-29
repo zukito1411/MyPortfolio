@@ -1,6 +1,7 @@
 :root {
   --font-body: "Manrope", sans-serif;
   --font-display: "Instrument Serif", serif;
+  --font-pixel: "Silkscreen", monospace;
   --page-width: 1180px;
   --radius-xl: 32px;
   --radius-lg: 24px;
@@ -242,6 +243,7 @@ select {
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--accent);
+  font-family: var(--font-pixel);
 }
 
 .hero h1,
@@ -308,6 +310,8 @@ select {
   border: 1px solid transparent;
   font-weight: 800;
   letter-spacing: -0.01em;
+  font-family: var(--font-pixel);
+  font-size: 0.78rem;
   box-shadow: 0 10px 20px rgba(16, 25, 47, 0.12);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
 }
@@ -369,8 +373,8 @@ select {
 }
 
 .hero-feature h2 {
-  margin: 12px 0 10px;
-  font-size: 1.7rem;
+  margin: 10px 0 10px;
+  font-size: 1.52rem;
   line-height: 1.08;
 }
 
@@ -381,8 +385,8 @@ select {
 }
 
 .hero-stats article {
-  min-height: 138px;
-  padding: 18px;
+  min-height: 110px;
+  padding: 16px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--bg-solid) 84%, transparent);
@@ -390,10 +394,17 @@ select {
 
 .hero-stats span {
   display: inline-block;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-size: 1.24rem;
   font-weight: 800;
   color: color-mix(in srgb, var(--accent-2) 40%, var(--text) 60%);
+  line-height: 1.1;
+}
+
+.hero-stats p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .status-band,
@@ -432,6 +443,8 @@ select {
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--bg-solid) 85%, transparent);
   font-weight: 700;
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
 }
 
 .section-heading {
@@ -516,6 +529,61 @@ select {
   padding-left: 18px;
 }
 
+.project-list li {
+  margin-bottom: 4px;
+}
+
+.stack-ribbon,
+.tech-line,
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.stack-ribbon {
+  margin-top: 16px;
+}
+
+.stack-ribbon span,
+.skill-icons-text span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-solid) 88%, transparent);
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+}
+
+.stack-ribbon i,
+.tech-line i,
+.skill-icons i {
+  font-size: 1.18rem;
+}
+
+.tech-line {
+  margin-top: 16px;
+  color: var(--text);
+}
+
+.tech-line i,
+.skill-icons i {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-solid) 88%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
 .split-layout {
   grid-template-columns: 1.08fr 0.92fr;
 }
@@ -572,6 +640,15 @@ select {
 .content-card,
 .callout {
   padding: 24px;
+}
+
+.skill-card {
+  display: grid;
+  gap: 12px;
+}
+
+.skill-card p {
+  margin: 0;
 }
 
 .education-row {
@@ -688,5 +765,9 @@ select {
   .button,
   .theme-toggle {
     width: 100%;
+  }
+
+  .button {
+    font-size: 0.74rem;
   }
 }
