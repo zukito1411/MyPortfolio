@@ -25,6 +25,7 @@ const animatedLogoSelectors = [
   ".stack-ribbon i",
   ".tech-line i",
   ".skill-icons i",
+  ".skill-logo-wrap",
   ".status-pills i"
 ];
 const tiltTargets = [
