@@ -1,495 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nymwhel Bernardo | Portfolio</title>
-    <meta
-      name="description"
-      content="Nymwhel Bernardo is a Software Engineer II building sleek frontend experiences, full-stack systems, and launch-ready products."
-    />
-    <link rel="icon" type="image/svg+xml" href="./assets/portfolio-favicon.svg" />
-    <meta name="theme-color" content="#101a31" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body data-theme="light">
-    <script>
-      (() => {
-        try {
-          const storageKey = "portfolio-theme";
-          const savedTheme = window.localStorage.getItem(storageKey);
-          const theme = savedTheme === "dark" || savedTheme === "light"
-            ? savedTheme
-            : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-          document.body.setAttribute("data-theme", theme);
-        } catch (error) {
-          document.body.setAttribute("data-theme", "light");
-        }
-      })();
-    </script>
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-    <div class="grid-layer"></div>
-    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
-    <button class="scroll-cue" id="scrollCue" type="button" aria-label="Scroll down for more">
-      <span class="scroll-cue-inner" aria-hidden="true">
-        <i class="fa-solid fa-chevron-down"></i>
-      </span>
-    </button>
 
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#home" aria-label="Go to top">
-          <span class="brand-mark">NB</span>
-          <span class="brand-copy">
-            <strong>Nymwhel Bernardo</strong>
-            <small>Software Engineer II</small>
-          </span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nymwhel Bernardo | Portfolio</title>
+  <meta name="description"
+    content="Nymwhel Bernardo is a Software Engineer II building sleek frontend experiences, full-stack systems, and launch-ready products." />
+  <link rel="icon" type="image/svg+xml" href="./assets/portfolio-favicon.svg" />
+  <meta name="theme-color" content="#101a31" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-        <nav class="topnav" aria-label="Primary">
-          <a href="#projects"><i class="fa-solid fa-grid-2" aria-hidden="true"></i><span>Projects</span></a>
-          <a href="#experience"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Experience</span></a>
-          <a href="#skills"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><span>Skills</span></a>
-          <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
-        </nav>
+<body data-theme="light">
+  <script>
+    (() => {
+      try {
+        const storageKey = "portfolio-theme";
+        const savedTheme = window.localStorage.getItem(storageKey);
+        const theme = savedTheme === "dark" || savedTheme === "light"
+          ? savedTheme
+          : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.body.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.body.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grid-layer"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <button class="scroll-cue" id="scrollCue" type="button" aria-label="Scroll down for more">
+    <span class="scroll-cue-inner" aria-hidden="true">
+      <i class="fa-solid fa-chevron-down"></i>
+    </span>
+  </button>
 
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label">Light mode</span>
-        </button>
-      </header>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span class="brand-mark">NB</span>
+        <span class="brand-copy">
+          <strong>Nymwhel Bernardo</strong>
+          <small>Software Engineer II</small>
+        </span>
+      </a>
 
-      <main>
-        <section class="hero panel" id="home">
-          <div class="hero-copy">
-            <p class="eyebrow">Frontend precision. Full-stack delivery. Product-focused execution.</p>
-            <h1>
-              Let's turn ideas
-              <span>into Reality</span>
-            </h1>
-            <p class="hero-text">
-              I am Nymwhel Bernardo, a Philippines-based Software Engineer II  
-              with experience across Angular, React, Java, Python, and Node.js projects.
-              I focus on building better user interfaces, improving workflows, writing cleaner implementations, 
-              and delivering client-ready solutions.</p>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#projects"><i class="fa-solid fa-grid-2" aria-hidden="true"></i><span>Projects</span></a>
+        <a href="#experience"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Experience</span></a>
+        <a href="#skills"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><span>Skills</span></a>
+        <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
+      </nav>
 
-              <p class="hero-text">
-              Throughout my projects, I worked on UI/UX improvements, API integration, CRUD operations, 
-              data processing, file uploads, report generation, and system enhancements. 
-              This experience helped me become adaptable, detail-oriented, 
-              and capable of working across both frontend and backend tasks.
-            </p>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+    </header>
 
-            <div class="hero-stats" aria-label="Portfolio highlights">
-              <article>
-                <span><strong data-count-to="3">0</strong>+</span>
-                <p>Years of software engineering growth</p>
-              </article>
-              <article>
-                <span><strong data-count-to="4">0</strong></span>
-                <p>Live product builds and deployments</p>
-              </article>
-              <article>
-                <span><strong data-count-to="18">0</strong>+</span>
-                <p>Tools across frontend, backend, cloud, QA, and delivery</p>
-              </article>
-            </div>
+    <main>
+      <section class="hero panel" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Frontend precision. Full-stack delivery. Product-focused execution.</p>
+          <h1>
+            Let's turn ideas
+            <span>into Reality</span>
+          </h1>
+          <p class="hero-text">
+            I am Nymwhel Bernardo, a Philippines-based Software Engineer II
+            with experience across Angular, React, Java, Python, and Node.js projects.
+            I focus on building better user interfaces, improving workflows, writing cleaner implementations,
+            and delivering client-ready solutions.</p>
 
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projects"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>View work</span></a>
-              <a class="button button-secondary" href="./Nymwhel_M_Bernardo_Resume.pdf" download><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i><span>Resume PDF</span></a>
-              <a class="button button-ghost" href="https://github.com/zukito1411" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
-            </div>
+          <p class="hero-text">
+            Throughout my projects, I worked on UI/UX improvements, API integration, CRUD operations,
+            data processing, file uploads, report generation, and system enhancements.
+            This experience helped me become adaptable, detail-oriented,
+            and capable of working across both frontend and backend tasks.
+          </p>
 
-          </div>
-
-          <aside class="hero-side">
-            <article class="hero-feature">
-              <p class="card-label">What I do best</p>
-              <h2>Sharper screens. Better flow. Stronger delivery.</h2>
-              <p>
-                I focus on creating and making UI/UX designs that look cleaner, behave better, and feel more ready for real users,
-                demos, and client review.
-              </p>
-              <div class="stack-ribbon" aria-label="Primary tech stack">
-                <span><i class="devicon-angularjs-plain"></i> Angular</span>
-                <span><i class="devicon-react-original"></i> React</span>
-                <span><i class="devicon-typescript-plain"></i> TypeScript</span>
-                <span><i class="devicon-nodejs-plain"></i> Node.js</span>
-                <span><i class="devicon-java-plain"></i> Java</span>
-                <span><i class="devicon-python-plain"></i> Python</span>
-              </div>
+          <div class="hero-stats" aria-label="Portfolio highlights">
+            <article>
+              <span><strong data-count-to="3">0</strong>+</span>
+              <p>Years of software engineering growth</p>
             </article>
-
-            <div class="quick-strip">
-              <div class="quick-card">
-                <span class="quick-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Location</span></span>
-                <strong>Bulacan, Philippines</strong>
-              </div>
-              <div class="quick-card">
-                <span class="quick-label"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Current role</span></span>
-                <strong>Software Engineer II</strong>
-              </div>
-              <div class="quick-card">
-                <span class="quick-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Focus</span></span>
-                <strong>UI/UX, frontend, full-stack, testing</strong>
-              </div>
-            </div>
-          </aside>
-        </section>
-
-        <section class="status-band panel" aria-label="Current focus">
-          <div>
-            <p class="eyebrow">Current focus</p>
-            <h2>Building clean interfaces, reliable workflows, and deploy-ready systems.</h2>
+            <article>
+              <span><strong data-count-to="4">0</strong></span>
+              <p>Live product builds and deployments</p>
+            </article>
+            <article>
+              <span><strong data-count-to="18">0</strong>+</span>
+              <p>Tools across frontend, backend, cloud, QA, and delivery</p>
+            </article>
           </div>
-          <div class="status-pills">
-            <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>UI polish</span>
-            <span><i class="fa-solid fa-code-branch" aria-hidden="true"></i>Full-stack delivery</span>
-            <span><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>Cloud-ready apps</span>
-          </div>
-        </section>
 
-        <section class="section" id="projects">
-          <div class="section-heading">
-            <p class="eyebrow">Featured projects</p>
-            <h2>Live products and systems I have built</h2>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"><i class="fa-solid fa-layer-group"
+                aria-hidden="true"></i><span>View work</span></a>
+            <a class="button button-secondary" href="./Nymwhel_M_Bernardo_Resume.pdf" download><i
+                class="fa-solid fa-file-arrow-down" aria-hidden="true"></i><span>Resume PDF</span></a>
+            <a class="button button-ghost" href="https://github.com/zukito1411" target="_blank" rel="noreferrer"><i
+                class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+          </div>
+
+        </div>
+
+        <aside class="hero-side">
+          <article class="hero-feature">
+            <p class="card-label">What I do best</p>
+            <h2>Sharper screens. Better flow. Stronger delivery.</h2>
             <p>
-              These projects reflect how I approach product direction, frontend structure, dashboard design,
-              business workflow logic, deployment, and overall polish.
+              I focus on creating and making UI/UX designs that look cleaner, behave better, and feel more ready for
+              real users,
+              demos, and client review.
             </p>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card project-card-indigo">
-              <div class="project-chip-row">
-                <span class="project-chip">SaaS</span>
-                <span class="project-chip project-chip-soft">Finance workflow</span>
-              </div>
-              <div class="project-title-row">
-                <img class="project-logo" src="./assets/ledgerail-mark.svg" alt="Ledgerail logo" />
-                <h3>Ledgerail</h3>
-              </div>
-              <p>
-                Operator-style finance workspace for document verification, ledgers, reminders, and reporting with a polished dashboard-first experience.
-              </p>
-              <ul class="project-list">
-                <li>Structured admin and workspace flows</li>
-                <li>Clean business UI with strong operational clarity</li>
-                <li>Designed to feel production-ready and sellable</li>
-              </ul>
-              <div class="tech-line">
-                <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
-                <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
-                <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
-              </div>
-              <div class="project-actions">
-                <a class="button button-primary" href="https://ledgerail.onrender.com/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open live app</span></a>
-              </div>
-            </article>
-
-            <article class="project-card project-card-cyan">
-              <div class="project-chip-row">
-                <span class="project-chip">SaaS</span>
-                <span class="project-chip project-chip-soft">Crypto tracker</span>
-              </div>
-              <div class="project-title-row">
-                <img class="project-logo" src="./assets/cryptodates-mark.png" alt="CryptoDates logo" />
-                <h3>CryptoDates</h3>
-              </div>
-              <p>
-                Crypto portfolio and notification platform with account flows, market dashboards, alerts, and environment-driven deployment setup.
-              </p>
-              <ul class="project-list">
-                <li>Email digests, alerts, and portfolio tracking</li>
-                <li>Host-agnostic backend plus modern dashboard UX</li>
-                <li>Built to deploy cleanly with env-based config</li>
-              </ul>
-              <div class="tech-line">
-                <i class="devicon-react-original colored" aria-hidden="true"></i>
-                <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
-                <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
-              </div>
-              <div class="project-actions">
-                <a class="button button-primary" href="https://cryptodates.onrender.com/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open live app</span></a>
-              </div>
-            </article>
-
-            <article class="project-card project-card-violet">
-              <div class="project-chip-row">
-                <span class="project-chip">SaaS</span>
-                <span class="project-chip project-chip-soft">AI workflow</span>
-              </div>
-              <div class="project-title-row">
-                <img class="project-logo" src="./assets/trustscope-mark.svg" alt="TrustScope logo" />
-                <h3>TrustScope</h3>
-              </div>
-              <p>
-                AI-use disclosure and approval platform for freelancers and agencies, centered on project trust, approvals, follow-ups, and receipts.
-              </p>
-              <ul class="project-list">
-                <li>Approval links, operator flows, and reports</li>
-                <li>Project-based trust and AI activity logging</li>
-                <li>Modern UI system across admin and workspace views</li>
-              </ul>
-              <div class="tech-line">
-                <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
-                <i class="devicon-python-plain colored" aria-hidden="true"></i>
-                <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
-              </div>
-              <div class="project-actions">
-                <a class="button button-primary" href="https://trustscope.onrender.com/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open live app</span></a>
-              </div>
-            </article>
-
-            <article class="project-card project-card-pink">
-              <div class="project-chip-row">
-                <span class="project-chip">Game</span>
-                <span class="project-chip project-chip-soft">Arcade release</span>
-              </div>
-              <div class="project-title-row">
-                <img class="project-logo" src="./assets/space-defenders-mark.png" alt="Space Impact Defender logo" />
-                <h3>Space Impact Defender</h3>
-              </div>
-              <p>
-                Space Impact Defender is a space shooter and tower-defense game built with React, Node.js, and Neon DB.
-              </p>
-              <ul class="project-list">
-                <li>Gameplay systems and release packaging</li>
-                <li>Multiplayer support</li>
-                <li>Player progress, leaderboards, and achievements</li>
-              </ul>
-              <div class="tech-line">
-                <i class="devicon-react-original colored" title="React" aria-hidden="true"></i>
-                <i class="devicon-nodejs-plain colored" title="Node.js" aria-hidden="true"></i>
-                <i class="devicon-postgresql-plain colored" title="Neon DB" aria-hidden="true"></i>
-              </div>
-              <div class="project-actions">
-                <a class="button button-primary" href="https://space-defenders-impact.onrender.com/" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open live app</span></a>
-              </div>
-            </article>
-          </div>
-
-          <div class="work-summary split-layout">
-            <article class="panel content-card">
-              <p class="eyebrow">Professional summary</p>
-              <h2>What I bring to a team</h2>
-
-              <p>
-                I am the type of developer who focuses on making things work properly, look cleaner,
-                and feel easier to use. I pay attention to details in the interface, the flow of a feature,
-                and the small issues that can affect the user experience.
-              </p>
-
-              <p>
-                I also enjoy collaborating with the team, sharing ideas, and creating an environment where
-                people can connect, communicate, and work better together. I believe good teamwork helps
-                make the final output stronger.
-              </p>
-
-              <p>
-                I may not claim to know everything, but I am willing to learn, adjust, test my work,
-                fix issues, document changes, and finish tasks properly.
-              </p>
-            </article>
-
-            <article class="panel contact-stack">
-              <div class="contact-block">
-                <p class="card-label">Direct contact</p>
-                <a href="mailto:bnymwhel@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>bnymwhel@gmail.com</span></a>
-                <a href="tel:+639227216804"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+63 922 721 6804</span></a>
-                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Bulacan, Philippines</span></span>
-              </div>
-
-              <div class="contact-block">
-                <p class="card-label">Links</p>
-                <a href="https://github.com/zukito1411" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub profile</span></a>
-                <a href="./Nymwhel_M_Bernardo_Resume.pdf" download><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i><span>Resume PDF</span></a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="experience">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Professional timeline</h2>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-item panel">
-              <div class="timeline-meta">
-                <span>Aug 2025 - Present</span>
-                <p>Tsukiden Global Solutions Inc.</p>
-              </div>
-              <div class="timeline-body">
-                <h3>Software Engineer II</h3>
-                <p>
-                  Develop and maintain client-facing system features across Angular, React, Java, and Python-based projects while improving UI/UX and application flow.
-                </p>
-                <ul class="timeline-list">
-                  <li>Improve frontend behavior based on client requirements and feedback</li>
-                  <li>Handle testing, debugging, issue tracking, and validation work</li>
-                  <li>Present delivered features and enhancements during client meetings</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item panel">
-              <div class="timeline-meta">
-                <span>Oct 2023 - Aug 2025</span>
-                <p>Tsukiden Global Solutions Inc.</p>
-              </div>
-              <div class="timeline-body">
-                <h3>Software Engineer</h3>
-                <p>
-                  Built frontend and backend functionality for internal and client project systems using Angular, React, Java, and Python.
-                </p>
-                <ul class="timeline-list">
-                  <li>Implemented requested features and resolved production issues</li>
-                  <li>Supported database tasks, testing, and system reliability improvements</li>
-                  <li>Collaborated on planning, documentation, and delivery progress</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item panel">
-              <div class="timeline-meta">
-                <span>Jul 2023 - Oct 2023</span>
-                <p>Tsukiden Global Solutions Inc.</p>
-              </div>
-              <div class="timeline-body">
-                <h3>Trainee Software Engineer</h3>
-                <p>
-                  Learned SDLC workflows, frontend development support, debugging, testing, quality assurance, and project documentation.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="skills">
-          <div class="section-heading">
-            <p class="eyebrow">Skills</p>
-            <h2>Stack and strengths</h2>
-          </div>
-
-          <div class="skills-grid">
-            <article class="panel skill-card">
-              <h3>Frontend</h3>
-              <div class="skill-icons" aria-hidden="true">
-                <i class="devicon-angularjs-plain colored"></i>
-                <i class="devicon-react-original colored"></i>
-                <i class="devicon-typescript-plain colored"></i>
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-html5-plain colored"></i>
-              </div>
-              <p>Angular, React, TypeScript, JavaScript, HTML, XML</p>
-            </article>
-            <article class="panel skill-card">
-              <h3>Backend and scripting</h3>
-              <div class="skill-icons" aria-hidden="true">
-                <i class="devicon-nodejs-plain colored"></i>
-                <i class="devicon-java-plain colored"></i>
-                <i class="devicon-python-plain colored"></i>
-                <i class="devicon-php-plain colored"></i>
-              </div>
-              <p>Node.js, Java, Python, PHP</p>
-            </article>
-            <article class="panel skill-card">
-              <h3>Databases</h3>
-              <div class="skill-icons" aria-hidden="true">
-                <i class="devicon-mysql-plain colored"></i>
-                <i class="devicon-postgresql-plain colored"></i>
-                <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/neon.svg" alt="Neon DB" title="Neon DB" /></span>
-                <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/pgadmin.png" alt="pgAdmin" title="pgAdmin" /></span>
-              </div>
-              <p>MySQL, PostgreSQL, NeonDB, PgAdmin</p>
-            </article>
-            <article class="panel skill-card">
-              <h3>Cloud and platforms</h3>
-              <div class="skill-icons" aria-hidden="true">
-                <i class="fa-brands fa-aws" aria-hidden="true"></i>
-                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-                <i class="devicon-ubuntu-plain colored"></i>
-                <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/amazon-rds.svg" alt="Amazon RDS" title="Amazon RDS" /></span>
-                <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/render.svg" alt="Render" title="Render" /></span>
-              </div>
-              <p>AWS CloudWatch, Amazon Cognito, Amazon RDS, Render deployment</p>
-            </article>
-            <article class="panel skill-card">
-              <h3>Tools and collaboration</h3>
-              <div class="skill-icons" aria-hidden="true">
-                <i class="devicon-git-plain colored"></i>
-                <i class="devicon-github-original colored"></i>
-                <i class="devicon-gitlab-plain colored"></i>
-                <i class="devicon-jira-plain colored"></i>
-                <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/microsoft-teams.svg" alt="Microsoft Teams" title="Microsoft Teams" /></span>
-                <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/subversion.svg" alt="Subversion / TortoiseSVN" title="TortoiseSVN" /></span>
-              </div>
-              <p>Git, GitHub, GitLab, Jira, Mattermost, Microsoft Teams, TortoiseSVN</p>
-            </article>
-            <article class="panel skill-card">
-              <h3>Delivery practices</h3>
-              <div class="skill-icons skill-icons-text" aria-hidden="true">
-                <span>QA</span>
-                <span>UX</span>
-                <span>Docs</span>
-              </div>
-              <p>SDLC, software testing, test case creation, debugging, documentation, client presentations, AI productivity tools</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section education-row">
-          <article class="panel education-card">
-            <p class="eyebrow">Education</p>
-            <h3>Bulacan State University</h3>
-            <span>BS in Information Technology</span>
-            <small>Jan 2019 - Jan 2023</small>
+            <div class="stack-ribbon" aria-label="Primary tech stack">
+              <span><i class="devicon-angularjs-plain"></i> Angular</span>
+              <span><i class="devicon-react-original"></i> React</span>
+              <span><i class="devicon-typescript-plain"></i> TypeScript</span>
+              <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+              <span><i class="devicon-java-plain"></i> Java</span>
+              <span><i class="devicon-python-plain"></i> Python</span>
+            </div>
           </article>
 
-          <article class="panel education-card">
-            <p class="eyebrow">Earlier foundation</p>
-            <h3>Next Generation Technological College</h3>
-            <span>AutoCAD and Animation</span>
-            <small>Jan 2017 - Jan 2019</small>
+          <div class="quick-strip">
+            <div class="quick-card">
+              <span class="quick-label"><i class="fa-solid fa-location-dot"
+                  aria-hidden="true"></i><span>Location</span></span>
+              <strong>Bulacan, Philippines</strong>
+            </div>
+            <div class="quick-card">
+              <span class="quick-label"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Current
+                  role</span></span>
+              <strong>Software Engineer II</strong>
+            </div>
+            <div class="quick-card">
+              <span class="quick-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Focus</span></span>
+              <strong>UI/UX, frontend, full-stack, testing</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="status-band panel" aria-label="Current focus">
+        <div>
+          <p class="eyebrow">Current focus</p>
+          <h2>Building clean interfaces, reliable workflows, and deploy-ready systems.</h2>
+        </div>
+        <div class="status-pills">
+          <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>UI polish</span>
+          <span><i class="fa-solid fa-code-branch" aria-hidden="true"></i>Full-stack delivery</span>
+          <span><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>Cloud-ready apps</span>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Featured projects</p>
+          <h2>Live products and systems I have built</h2>
+          <p>
+            These projects reflect how I approach product direction, frontend structure, dashboard design,
+            business workflow logic, deployment, and overall polish.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-indigo">
+            <div class="project-chip-row">
+              <span class="project-chip">SaaS</span>
+              <span class="project-chip project-chip-soft">Finance workflow</span>
+            </div>
+            <div class="project-title-row">
+              <img class="project-logo" src="./assets/ledgerail-mark.svg" alt="Ledgerail logo" />
+              <h3>Ledgerail</h3>
+            </div>
+            <p>
+              Operator-style finance workspace for document verification, ledgers, reminders, and reporting with a
+              polished dashboard-first experience.
+            </p>
+            <ul class="project-list">
+              <li>Structured admin and workspace flows</li>
+              <li>Clean business UI with strong operational clarity</li>
+              <li>Designed to feel production-ready and sellable</li>
+            </ul>
+            <div class="tech-line">
+              <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
+              <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+              <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+            </div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://ledgerail.onrender.com/" target="_blank"
+                rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open
+                  live app</span></a>
+            </div>
           </article>
-        </section>
 
-        <section class="section callout panel" id="contact">
-          <div>
-            <p class="eyebrow">Let us connect</p>
-            <h2>If you need someone who can refine both the look and the logic, I would love to talk.</h2>
-          </div>
-          <div class="callout-actions">
-            <a class="button button-primary" href="mailto:bnymwhel@gmail.com"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i><span>Send email</span></a>
-            <a class="button button-secondary" href="https://github.com/zukito1411" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>View GitHub</span></a>
-          </div>
-        </section>
-      </main>
+          <article class="project-card project-card-cyan">
+            <div class="project-chip-row">
+              <span class="project-chip">SaaS</span>
+              <span class="project-chip project-chip-soft">Crypto tracker</span>
+            </div>
+            <div class="project-title-row">
+              <img class="project-logo" src="./assets/cryptodates-mark.png" alt="CryptoDates logo" />
+              <h3>CryptoDates</h3>
+            </div>
+            <p>
+              Crypto portfolio and notification platform with account flows, market dashboards, alerts, and
+              environment-driven deployment setup.
+            </p>
+            <ul class="project-list">
+              <li>Email digests, alerts, and portfolio tracking</li>
+              <li>Host-agnostic backend plus modern dashboard UX</li>
+              <li>Built to deploy cleanly with env-based config</li>
+            </ul>
+            <div class="tech-line">
+              <i class="devicon-react-original colored" aria-hidden="true"></i>
+              <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
+              <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+            </div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://cryptodates.onrender.com/" target="_blank"
+                rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open
+                  live app</span></a>
+            </div>
+          </article>
 
-      <footer class="footer">
-        <p>Designed and built by Nymwhel Bernardo.</p>
-        <p>&copy; <span id="year"></span> Portfolio.</p>
-      </footer>
-    </div>
+          <article class="project-card project-card-violet">
+            <div class="project-chip-row">
+              <span class="project-chip">SaaS</span>
+              <span class="project-chip project-chip-soft">AI workflow</span>
+            </div>
+            <div class="project-title-row">
+              <img class="project-logo" src="./assets/trustscope-mark.svg" alt="TrustScope logo" />
+              <h3>TrustScope</h3>
+            </div>
+            <p>
+              AI-use disclosure and approval platform for freelancers and agencies, centered on project trust,
+              approvals, follow-ups, and receipts.
+            </p>
+            <ul class="project-list">
+              <li>Approval links, operator flows, and reports</li>
+              <li>Project-based trust and AI activity logging</li>
+              <li>Modern UI system across admin and workspace views</li>
+            </ul>
+            <div class="tech-line">
+              <i class="devicon-angularjs-plain colored" aria-hidden="true"></i>
+              <i class="devicon-python-plain colored" aria-hidden="true"></i>
+              <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+            </div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://trustscope.onrender.com/" target="_blank"
+                rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open
+                  live app</span></a>
+            </div>
+          </article>
 
-    <script src="./script.js"></script>
-  </body>
+          <article class="project-card project-card-pink">
+            <div class="project-chip-row">
+              <span class="project-chip">Game</span>
+              <span class="project-chip project-chip-soft">Arcade release</span>
+            </div>
+            <div class="project-title-row">
+              <img class="project-logo" src="./assets/space-defenders-mark.png" alt="Space Impact Defender logo" />
+              <h3>Space Impact Defender</h3>
+            </div>
+            <p>
+              Space Impact Defender is a space shooter and tower-defense game built with React, Node.js, and Neon DB.
+            </p>
+            <ul class="project-list">
+              <li>Gameplay systems and release packaging</li>
+              <li>Multiplayer support</li>
+              <li>Player progress, leaderboards, and achievements</li>
+            </ul>
+            <div class="tech-line">
+              <i class="devicon-react-original colored" title="React" aria-hidden="true"></i>
+              <i class="devicon-nodejs-plain colored" title="Node.js" aria-hidden="true"></i>
+              <i class="devicon-postgresql-plain colored" title="Neon DB" aria-hidden="true"></i>
+            </div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://space-defenders-impact.onrender.com/" target="_blank"
+                rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Open
+                  live app</span></a>
+            </div>
+          </article>
+          <article class="project-card project-card-emerald">
+            <div class="project-chip-row">
+              <span class="project-chip">PWA</span>
+              <span class="project-chip project-chip-soft">Personal finance</span>
+            </div>
+
+            <div class="project-title-row">
+              <img class="project-logo" src="./assets/savings-tracker-mark.svg" alt="Savings Tracker logo" />
+              <h3>Savings Tracker</h3>
+            </div>
+
+            <p>
+              Progressive Web App for managing savings goals, tracking contributions,
+              and monitoring financial progress through a clean, responsive, and
+              mobile-friendly experience.
+            </p>
+
+            <ul class="project-list">
+              <li>Create and organize multiple savings goals</li>
+              <li>Track savings, progress, and remaining targets</li>
+              <li>Responsive PWA designed for desktop and mobile use</li>
+            </ul>
+
+            <div class="tech-line">
+              <i class="devicon-angularjs-plain colored"></i>
+              <i class="devicon-typescript-plain colored"></i>
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+            </div>
+
+            <div class="project-actions">
+              <a class="button button-primary" href="https://savings-tracker-co.netlify.app/" target="_blank"
+                rel="noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                <span>Open live app</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-summary split-layout">
+          <article class="panel content-card">
+            <p class="eyebrow">Professional summary</p>
+            <h2>What I bring to a team</h2>
+
+            <p>
+              I am the type of developer who focuses on making things work properly, look cleaner,
+              and feel easier to use. I pay attention to details in the interface, the flow of a feature,
+              and the small issues that can affect the user experience.
+            </p>
+
+            <p>
+              I also enjoy collaborating with the team, sharing ideas, and creating an environment where
+              people can connect, communicate, and work better together. I believe good teamwork helps
+              make the final output stronger.
+            </p>
+
+            <p>
+              I may not claim to know everything, but I am willing to learn, adjust, test my work,
+              fix issues, document changes, and finish tasks properly.
+            </p>
+          </article>
+
+          <article class="panel contact-stack">
+            <div class="contact-block">
+              <p class="card-label">Direct contact</p>
+              <a href="mailto:bnymwhel@gmail.com"><i class="fa-solid fa-envelope"
+                  aria-hidden="true"></i><span>bnymwhel@gmail.com</span></a>
+              <a href="tel:+639227216804"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+63 922 721
+                  6804</span></a>
+              <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Bulacan, Philippines</span></span>
+            </div>
+
+            <div class="contact-block">
+              <p class="card-label">Links</p>
+              <a href="https://github.com/zukito1411" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"
+                  aria-hidden="true"></i><span>GitHub profile</span></a>
+              <a href="./Nymwhel_M_Bernardo_Resume.pdf" download><i class="fa-solid fa-file-arrow-down"
+                  aria-hidden="true"></i><span>Resume PDF</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Professional timeline</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item panel">
+            <div class="timeline-meta">
+              <span>Aug 2025 - Present</span>
+              <p>Tsukiden Global Solutions Inc.</p>
+            </div>
+            <div class="timeline-body">
+              <h3>Software Engineer II</h3>
+              <p>
+                Develop and maintain client-facing system features across Angular, React, Java, and Python-based
+                projects while improving UI/UX and application flow.
+              </p>
+              <ul class="timeline-list">
+                <li>Improve frontend behavior based on client requirements and feedback</li>
+                <li>Handle testing, debugging, issue tracking, and validation work</li>
+                <li>Present delivered features and enhancements during client meetings</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item panel">
+            <div class="timeline-meta">
+              <span>Oct 2023 - Aug 2025</span>
+              <p>Tsukiden Global Solutions Inc.</p>
+            </div>
+            <div class="timeline-body">
+              <h3>Software Engineer</h3>
+              <p>
+                Built frontend and backend functionality for internal and client project systems using Angular, React,
+                Java, and Python.
+              </p>
+              <ul class="timeline-list">
+                <li>Implemented requested features and resolved production issues</li>
+                <li>Supported database tasks, testing, and system reliability improvements</li>
+                <li>Collaborated on planning, documentation, and delivery progress</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item panel">
+            <div class="timeline-meta">
+              <span>Jul 2023 - Oct 2023</span>
+              <p>Tsukiden Global Solutions Inc.</p>
+            </div>
+            <div class="timeline-body">
+              <h3>Trainee Software Engineer</h3>
+              <p>
+                Learned SDLC workflows, frontend development support, debugging, testing, quality assurance, and project
+                documentation.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Stack and strengths</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="panel skill-card">
+            <h3>Frontend</h3>
+            <div class="skill-icons" aria-hidden="true">
+              <i class="devicon-angularjs-plain colored"></i>
+              <i class="devicon-react-original colored"></i>
+              <i class="devicon-typescript-plain colored"></i>
+              <i class="devicon-javascript-plain colored"></i>
+              <i class="devicon-html5-plain colored"></i>
+            </div>
+            <p>Angular, React, TypeScript, JavaScript, HTML, XML</p>
+          </article>
+          <article class="panel skill-card">
+            <h3>Backend and scripting</h3>
+            <div class="skill-icons" aria-hidden="true">
+              <i class="devicon-nodejs-plain colored"></i>
+              <i class="devicon-java-plain colored"></i>
+              <i class="devicon-python-plain colored"></i>
+              <i class="devicon-php-plain colored"></i>
+            </div>
+            <p>Node.js, Java, Python, PHP</p>
+          </article>
+          <article class="panel skill-card">
+            <h3>Databases</h3>
+            <div class="skill-icons" aria-hidden="true">
+              <i class="devicon-mysql-plain colored"></i>
+              <i class="devicon-postgresql-plain colored"></i>
+              <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/neon.svg" alt="Neon DB"
+                  title="Neon DB" /></span>
+              <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/pgadmin.png" alt="pgAdmin"
+                  title="pgAdmin" /></span>
+            </div>
+            <p>MySQL, PostgreSQL, NeonDB, PgAdmin</p>
+          </article>
+          <article class="panel skill-card">
+            <h3>Cloud and platforms</h3>
+            <div class="skill-icons" aria-hidden="true">
+              <i class="fa-brands fa-aws" aria-hidden="true"></i>
+              <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+              <i class="devicon-ubuntu-plain colored"></i>
+              <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/amazon-rds.svg"
+                  alt="Amazon RDS" title="Amazon RDS" /></span>
+              <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/render.svg" alt="Render"
+                  title="Render" /></span>
+            </div>
+            <p>AWS CloudWatch, Amazon Cognito, Amazon RDS, Render deployment</p>
+          </article>
+          <article class="panel skill-card">
+            <h3>Tools and collaboration</h3>
+            <div class="skill-icons" aria-hidden="true">
+              <i class="devicon-git-plain colored"></i>
+              <i class="devicon-github-original colored"></i>
+              <i class="devicon-gitlab-plain colored"></i>
+              <i class="devicon-jira-plain colored"></i>
+              <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/microsoft-teams.svg"
+                  alt="Microsoft Teams" title="Microsoft Teams" /></span>
+              <span class="skill-logo-wrap"><img class="skill-logo-img" src="./assets/tech/subversion.svg"
+                  alt="Subversion / TortoiseSVN" title="TortoiseSVN" /></span>
+            </div>
+            <p>Git, GitHub, GitLab, Jira, Mattermost, Microsoft Teams, TortoiseSVN</p>
+          </article>
+          <article class="panel skill-card">
+            <h3>Delivery practices</h3>
+            <div class="skill-icons skill-icons-text" aria-hidden="true">
+              <span>QA</span>
+              <span>UX</span>
+              <span>Docs</span>
+            </div>
+            <p>SDLC, software testing, test case creation, debugging, documentation, client presentations, AI
+              productivity tools</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education-row">
+        <article class="panel education-card">
+          <p class="eyebrow">Education</p>
+          <h3>Bulacan State University</h3>
+          <span>BS in Information Technology</span>
+          <small>Jan 2019 - Jan 2023</small>
+        </article>
+
+        <article class="panel education-card">
+          <p class="eyebrow">Earlier foundation</p>
+          <h3>Next Generation Technological College</h3>
+          <span>AutoCAD and Animation</span>
+          <small>Jan 2017 - Jan 2019</small>
+        </article>
+      </section>
+
+      <section class="section callout panel" id="contact">
+        <div>
+          <p class="eyebrow">Let us connect</p>
+          <h2>If you need someone who can refine both the look and the logic, I would love to talk.</h2>
+        </div>
+        <div class="callout-actions">
+          <a class="button button-primary" href="mailto:bnymwhel@gmail.com"><i class="fa-solid fa-paper-plane"
+              aria-hidden="true"></i><span>Send email</span></a>
+          <a class="button button-secondary" href="https://github.com/zukito1411" target="_blank" rel="noreferrer"><i
+              class="fa-brands fa-github" aria-hidden="true"></i><span>View GitHub</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Designed and built by Nymwhel Bernardo.</p>
+      <p>&copy; <span id="year"></span> Portfolio.</p>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>

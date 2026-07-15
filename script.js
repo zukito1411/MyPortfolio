@@ -50,7 +50,7 @@ if (yearNode) {
 
 function getPreferredTheme() {
   const savedTheme = window.localStorage.getItem(storageKey);
-  if (savedTheme === "dark" || savedTheme === "light") {
+  if (savedTheme) {
     return { theme: savedTheme, persisted: true };
   }
 
@@ -131,7 +131,7 @@ function setupAnchorNavigation() {
 
   anchorLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
-      const href = link.getAttribute("href");
+      const href = link.getAttribute("href") || "";
       if (!href) {
         return;
       }
@@ -159,13 +159,9 @@ function setupAnchorNavigation() {
 
 function syncInitialScroll() {
   clearHomeHash();
-  forceTopStart();
+  // The timeout helps ensure this runs after any browser-initiated scroll restoration attempts.
+  setTimeout(forceTopStart, 0);
 }
-
-setupAnchorNavigation();
-window.addEventListener("DOMContentLoaded", syncInitialScroll);
-window.addEventListener("load", syncInitialScroll);
-window.addEventListener("pageshow", syncInitialScroll);
 
 function setupRevealMotion() {
   const cards = revealTargets.flatMap((selector) => [...document.querySelectorAll(selector)]);
@@ -324,10 +320,34 @@ function setupCounters() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
+function debounce(func, wait = 150) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+// --- Initial Setup Calls ---
+
+setupAnchorNavigation();
 setupRevealMotion();
 setupTiltMotion();
 setupCounters();
 updateScrollUI();
 
+// On page load or when navigating back/forward
+window.addEventListener("pageshow", (event) => {
+  // event.persisted is true if the page is from the back/forward cache
+  syncInitialScroll();
+});
+
+// Initial call for fresh page loads
+if (document.readyState !== "loading") {
+  syncInitialScroll();
+} else {
+  document.addEventListener("DOMContentLoaded", syncInitialScroll);
+}
+
 window.addEventListener("scroll", updateScrollUI, { passive: true });
-window.addEventListener("resize", updateScrollUI);
+window.addEventListener("resize", debounce(updateScrollUI));
